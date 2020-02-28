@@ -9,7 +9,7 @@ pp directors_database
 def gross_for_director(director_data)
     my_index = 0 
     director_sum = 0
-  binding.pry 
+  #binding.pry 
     while my_index < director_data[:movies].length do 
     director_sum += director_data[:movies][my_index][:worldwide_gross]
     my_index += 1
