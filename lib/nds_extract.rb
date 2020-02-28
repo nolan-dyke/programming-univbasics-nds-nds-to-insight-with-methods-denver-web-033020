@@ -10,7 +10,7 @@ def gross_for_director(director_data)
     my_index = 0 
     director_sum = 0
   binding.pry 
-    while my_index < director_data.length do 
+    while my_index < director_data[:movies].length do 
     director_sum += director_data[my_index][:worldwide_gross]
     my_index += 1
   end 
@@ -21,7 +21,7 @@ def directors_totals(nds)
   total_hash = {} 
   array_index = 0 
    while array_index < nds.length do
-    director_data = nds[array_index][:movies]
+    director_data = nds[array_index]
     director_sum = 0
     director_name = nds[array_index][:name]
     director_sum += gross_for_director(director_data)
